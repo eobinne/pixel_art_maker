@@ -2,7 +2,8 @@
 I changed from the type submit in order to stop the page from refreshing everytime the 
 makeGrid() function is called by the app*/
 
-$('#build').on('click ', function makeGrid() {
+$('#build').on('click ', function makeGrid(event) {
+	event.preventDefault();
 	$('tr').remove(); // this line of code is responsible for clearing the grid
 	var row = + $('#inputHeight').val(); // Access the value inputed by the user and assign to the variable row
 	var col = + $('#inputWeight').val(); // Access the value inputed by the user and assign to the variable col
