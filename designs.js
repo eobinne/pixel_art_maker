@@ -5,11 +5,11 @@ makeGrid() function is called by the app*/
 $('#build').on('click ', function makeGrid(event) {
 	event.preventDefault();
 	$('tr').remove(); // this line of code is responsible for clearing the grid
-	var row = + $('#inputHeight').val(); // Access the value inputed by the user and assign to the variable row
-	var col = + $('#inputWeight').val(); // Access the value inputed by the user and assign to the variable col
-	for (var i = 1; i <= row; i++) {
+	let row = + $('#inputHeight').val(); // Access the value inputed by the user and assign to the variable row
+	let col = + $('#inputWeight').val(); // Access the value inputed by the user and assign to the variable col
+	for (let i = 1; i <= row; i++) {
 		$('#pixelCanvas').append('<tr></tr>'); // loop function that dynamically creates the rows
-	} for (var a = 1; a <= col; a++) {
+	} for (let a = 1; a <= col; a++) {
 		$('#pixelCanvas').children('tr').append('<td></td>'); // loop function that dynamically creates the columns
 	}
 });
